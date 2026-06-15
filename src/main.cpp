@@ -28,13 +28,13 @@
 // Fill % formula    : ((BIN_HEIGHT - distance) / BIN_HEIGHT) * 100
 //
 //   distance = 100 cm →   0% full (empty)
-//   distance =  25 cm →  75% full (WARNING threshold)
+//   distance =  30 cm →  75% full (WARNING threshold)
 //   distance =  20 cm → 100% full (FULL — at blind zone edge)
 //   distance < 20 cm  → overflowing / sensor error
 
 #define BIN_HEIGHT_CM      100.0   // Physical height of the bin
 #define SENSOR_MIN_CM       20.0   // AJ-SR04M minimum reliable distance
-#define WARN_THRESHOLD_CM   25.0   // 75% full  → (100 - 25) / 100 = 75%
+#define WARN_THRESHOLD_CM   30.0   // 75% full  → (100 - 30) / 100 = 70%
 #define FULL_THRESHOLD_CM   20.0   // 100% full → at blind zone, treat as full
 
 float distance = 0;
